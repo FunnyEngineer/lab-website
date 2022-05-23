@@ -30,7 +30,7 @@ const Testtheme = createTheme({
         danger: orange[500],
       },
       typography: {
-        
+        fontSize: 12,
         fontFamily: [
           'Merriweather',
         ].join(','),
