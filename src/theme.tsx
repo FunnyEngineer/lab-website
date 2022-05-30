@@ -25,6 +25,9 @@ const Testtheme = createTheme({
         secondary: {
           main: "#333f48",
         },
+        success: {
+          main: "#FFFFFF",
+        },
       },
       status: {
         danger: orange[500],
@@ -35,6 +38,7 @@ const Testtheme = createTheme({
           'Merriweather',
         ].join(','),
       },
+      
   });
 
 export default Testtheme; 

@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from './logo.svg';
-import { Button, Card, Grid, IconButton, Link, List, Paper, Toolbar, Typography } from '@mui/material';
+import { Button, Card, Collapse, Fade, Grid, IconButton, Link, List, Paper, Toolbar, Typography } from '@mui/material';
 import { Add, Search, Title } from '@mui/icons-material';
 import NavigationTab from "../components/NavigationTab";
 import campus from '../figs/campus.jpg';
@@ -8,9 +8,17 @@ import { Box } from "@mui/system";
 import BottomBar from "../components/BottomBar";
 
 function Home() {
+    const [checked, setChecked] = useState(false);
+    // window.addEventListener('load', (event) => {
+    //     setChecked((prev) => !prev);
+    //   });
+    
+      useEffect(() => {
+        setChecked((prev) => true);
+      });
     return (
         <>
-        <NavigationTab/>
+        <NavigationTab /> 
         <Paper
         sx={{
             position: 'relative',
@@ -25,15 +33,18 @@ function Home() {
             }}
         >
             {<img style={{ display: 'none' }} src={campus} alt={"campus"} />}
-            <Typography component="h1" variant="h3" color="inherit" align="right"
-            sx={{pr:5, pt:20}}>
-              {"Extreme Weather & Urban Sustainability "}
-            </Typography>
-            <Typography component="h1" variant="h3" color="inherit" align="right" 
-            sx={{pr:5}}>
-            {"Laboratory"}
-            </Typography>
-
+            <Fade in={checked} timeout={4000}>
+                <Typography component="h1" variant="h3" color="inherit" align="right"
+                sx={{pr:5, pt:20}}>
+                {"Extreme Weather & Urban Sustainability "}
+                </Typography>
+            </Fade>
+            <Fade in={checked} timeout={4000}>
+                <Typography component="h1" variant="h3" color="inherit" align="right" 
+                sx={{pr:5}}>
+                {"Laboratory"}
+                </Typography>
+            </Fade>
         </Paper>
         <Typography variant="h4" color="primary" align="left"
         sx={{pt:10, pl:40}}>Recent News</Typography>

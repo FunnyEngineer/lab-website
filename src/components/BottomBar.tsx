@@ -68,7 +68,7 @@ function BottomBar() {
                {"LABORATORY PARTNERS"}
              </Typography>
            </Toolbar>
-           <Grid container spacing={2} sx={{px:10, pb:10}}>
+           <Grid container spacing={2} sx={{px:10, pb:5, pt:3}}>
             <Grid item xs={4}>
                 {colleges}
             </Grid>
