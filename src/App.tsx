@@ -8,6 +8,8 @@ import { BrowserRouter as Router, Routes,
   Route} from "react-router-dom";
 import Home from './pages/Home';
 import Testtheme from './theme';
+import { Research } from './pages/Research';
+import { News } from './pages/News';
 
 function App() {
   const sections = [
@@ -27,6 +29,8 @@ function App() {
       <Routes>
         <Route path= "/" element={<Home/>}/>
         <Route path= "/people" element={<People/>}/>
+        <Route path= "/research" element={<Research/>}/>
+        <Route path= "/news" element={<News/>}/>
       </Routes>
     </Router>
     </>

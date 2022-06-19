@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import React from "react";
 
 interface profileCardProps {
-    img: string,
+    img: string | null,
     name: string,
     title: string,
     email: string,
@@ -14,7 +14,7 @@ function ProfileCard(props: profileCardProps) {
         <React.Fragment>
             <Card elevation={0}>
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', pl: 1, pb: 1 }}>
-                <Avatar alt={props.name} src={props.img} sx={{ width: '200px', height: '200px' }}/>
+                <Avatar alt={props.name} src={(props.img) ? props.img : undefined} sx={{ width: '200px', height: '200px' }}/>
                 <Typography gutterBottom variant="h5" component="div" color='primary' sx={{pt: 3, pb:2}}>
                 {props.name}
                 </Typography>
