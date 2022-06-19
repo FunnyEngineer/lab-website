@@ -13,7 +13,7 @@ import { News } from './pages/News';
 
 function App() {
   const sections = [
-    {title: "HOME", url: '/'},
+    {title: "HOME", url: '/lab-website'},
     {title: "PEOPLE", url: 'people/'},
     {title: "RESEARCH", url: 'research/'},
     {title: "PUBLICATIONS", url: 'publications/'},
