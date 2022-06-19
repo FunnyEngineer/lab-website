@@ -1,19 +1,19 @@
 import React, { useState } from "react";
-import { AppBar, Button, IconButton, Link, Toolbar, Typography, useScrollTrigger } from '@mui/material';
+import { AppBar, Button, IconButton, Toolbar, Typography, useScrollTrigger } from '@mui/material';
 import { Search } from '@mui/icons-material';
 import '../App.css';
-
+import { Link } from 'react-router-dom';
 
 function NavigationTab() {
   const trigger = useScrollTrigger();
     const sections = [
         {title: "HOME", url: '/'},
-        {title: "PEOPLE", url: '/people/'},
-        {title: "RESEARCH", url: '/research/'},
-        {title: "PUBLICATIONS", url: '/publications/'},
-        {title: "GITHUB", url: '/github/'},
-        {title: "NEWS", url: '/news/'},
-        {title: "CONTACT", url: '/contact/'},
+        {title: "PEOPLE", url: '/people'},
+        {title: "RESEARCH", url: '/research'},
+        {title: "PUBLICATIONS", url: '/publications'},
+        {title: "GITHUB", url: '/github'},
+        {title: "NEWS", url: '/news'},
+        {title: "CONTACT", url: '/contact'},
     
       ];
 
@@ -28,9 +28,10 @@ function NavigationTab() {
 
               {sections.map((section) => (
                 <Button
+                  component={Link}
                   key={section.title}
                   variant="text"
-                  href={section.url}
+                  to={section.url}
                   sx={{ p: 1, flexShrink: 0 }}
                   color = {trigger ? "primary" : 'success'}
                 >
