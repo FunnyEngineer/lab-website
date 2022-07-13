@@ -1,5 +1,6 @@
 import { Divider, Grid, Link, ListItem, Paper, Toolbar, Typography } from "@mui/material";
 import { grey } from "@mui/material/colors";
+import { Container } from "@mui/system";
 import React from "react";
 
 function BottomBar() {
@@ -33,26 +34,27 @@ function BottomBar() {
 
      const bottom = (
          <Grid container direction="row"
-         justifyContent="space-between"
+         justifyContent="space-evenly"
          alignItems="center"
          spacing={2}>
-        <Grid container direction="row"
-            justifyContent="space-evenly"
-            alignItems="start" xs= {8}>
+        <Grid item xs= {2}>
              
          <Link href="https://emergency.utexas.edu/">Emergency Information</Link>
          <Divider orientation="vertical" flexItem />
+         </Grid>
+         <Grid item xs= {2}> 
          <Link href="https://www.utexas.edu/site-policies">Site Policies</Link>
          <Divider orientation="vertical" flexItem />
+         </Grid>
+         <Grid item xs= {2}> 
          <Link href="https://cio.utexas.edu/policies/web-accessibility">Web Accessibility Policies</Link>
          <Divider orientation="vertical" flexItem />
-         <Link href="https://cio.utexas.edu/policies/web-privacy">Web Privacy Policy</Link>
-         
-
          </Grid>
-         <Grid container direction="row"
-            justifyContent="space-around"
-            alignItems="start"  xs= {4}>
+         <Grid item xs= {2}> 
+         <Link href="https://cio.utexas.edu/policies/web-privacy">Web Privacy Policy</Link>
+         <Divider orientation="vertical" flexItem />
+         </Grid>
+         <Grid item xs= {4}> 
          <Typography>© The University of Texas at Austin 2021</Typography>
          </Grid>
          </Grid>
@@ -60,9 +62,8 @@ function BottomBar() {
      );
 
     return (
-        <div className="App">
-        <Paper sx= {{backgroundColor: grey[500], px:15}}>
-           <Toolbar sx = {{borderBottom: 1, borderColor: 'divider', px:10}}>
+        <Container maxWidth={false} sx= {{backgroundColor: grey[500], width:'100%'}} className = 'App'>
+           <Toolbar sx = {{borderBottom: 1, borderColor: 'divider', px:0}}>
              <Typography component="h1" variant="h4"
              color ={grey[300]}  align="left" noWrap sx={{flex:1}}>
                {"LABORATORY PARTNERS"}
@@ -81,8 +82,7 @@ function BottomBar() {
             </Grid>
             <Divider  />
             {bottom}
-        </Paper>
-       </div>
+        </Container>
     );
 }
 
