@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/lab-website/static/css/main.1e3bdc4c.css",
-    "main.js": "/lab-website/static/js/main.2c2e4151.js",
+    "main.js": "/lab-website/static/js/main.1e56dd10.js",
     "static/js/787.3e1d3e67.chunk.js": "/lab-website/static/js/787.3e1d3e67.chunk.js",
     "static/media/campus.jpg": "/lab-website/static/media/campus.3e00941ff1530a9e70d9.jpg",
     "static/media/yajie.jpg": "/lab-website/static/media/yajie.a35e8f4bb125994c802c.jpg",
@@ -21,11 +21,11 @@
     "static/media/merriweather-vietnamese-400-normal.woff2": "/lab-website/static/media/merriweather-vietnamese-400-normal.1c4607f612e73642c77e.woff2",
     "index.html": "/lab-website/index.html",
     "main.1e3bdc4c.css.map": "/lab-website/static/css/main.1e3bdc4c.css.map",
-    "main.2c2e4151.js.map": "/lab-website/static/js/main.2c2e4151.js.map",
+    "main.1e56dd10.js.map": "/lab-website/static/js/main.1e56dd10.js.map",
     "787.3e1d3e67.chunk.js.map": "/lab-website/static/js/787.3e1d3e67.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1e3bdc4c.css",
-    "static/js/main.2c2e4151.js"
+    "static/js/main.1e56dd10.js"
   ]
 }
